@@ -1,0 +1,13 @@
+<%- include('partials/head.ejs') %>
+
+    <body>
+        <%- include('partials/navbar.ejs') %>
+
+            <h1>Random number is: <%= num %>
+            </h1>
+            <% if(num % 2==0){%>
+                <h1>That is even number</h1>
+                <% } %>
+    </body>
+
+    </html>

@@ -1,0 +1,40 @@
+<%- include('partials/head.ejs') %>
+
+    <body>
+
+        <%- include('partials/navbar.ejs') %>
+
+
+            <h1>Your browsing through <%= name %>
+            </h1>
+            <h2>
+                <%= description%>
+            </h2>
+            <hr>
+            <h3>
+                <%= name %>
+            </h3>
+            <article>
+                <% for(let post of posts){ %>
+                    <p>
+                        <%= post.title %>
+
+                            <b><span>
+                                    by,----<%= post.author %>
+                                </span></b>
+                            <% if(post.img){ %>
+                                <img src="<%=post.img%>" alt="">
+                                <% } %>
+                    </p>
+
+                    <% }%>
+
+            </article>
+            <hr>
+            <p>
+                <%= subscribers %> Total subscribers
+            </p>
+
+    </body>
+
+    </html>
